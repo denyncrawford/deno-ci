@@ -78,6 +78,8 @@ Compiled binaries will be available in the `dist` directory.
 
 ## Production Deployment
 
+### Option 1: Using systemd (Linux)
+
 1. Copy the appropriate binary from the `dist` directory to your server
 
 2. Make it executable (Linux/macOS):
@@ -107,6 +109,22 @@ WantedBy=multi-user.target
 sudo systemctl enable deno-ci
 sudo systemctl start deno-ci
 ```
+
+### Option 2: Using PM2
+
+1. Install PM2 if you haven't already:
+```bash
+npm install -g pm2
+```
+
+2. Start the service with PM2:
+```bash
+pm2 start deno-ci-linux # or deno-ci-darwin for macOS
+pm2 save          # Save the process list
+pm2 startup       # Generate startup script
+```
+
+> If you want to change the port or other settings, you can modify the service configuration file or the environment variables.
 
 ## Usage
 
