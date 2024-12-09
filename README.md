@@ -117,6 +117,7 @@ sudo systemctl start deno-ci
 npm install -g pm2
 ```
 
+
 2. Start the service with PM2:
 ```bash
 pm2 start deno-ci-linux # or deno-ci-darwin for macOS
