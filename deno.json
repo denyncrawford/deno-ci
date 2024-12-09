@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "tasks": {
+    "dev": "deno run -A --watch src/main.ts",
+    "start": "deno run --allow-net --allow-read --allow-run src/main.ts",
+    "build:darwin": "deno compile -A --output dist/deno-ci-darwin  src/main.ts --target x86_64-apple-darwin",
+    "build:linux": "deno compile -A --output dist/deno-ci-linux  src/main.ts --target x86_64-unknown-linux-gnu",
+    "build:windows": "deno compile -A --output dist/deno-ci.exe  src/main.ts --target x86_64-pc-windows-msvc",
+    "build": "deno task build:darwin && deno task build:linux && deno task build:windows"
+  },
+  "imports": {
+    "hono": "jsr:@hono/hono"
+  },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "hono/jsx"
+  }
+}
