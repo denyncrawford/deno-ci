@@ -21,7 +21,7 @@ A lightweight continuous integration service written in Deno, inspired by CI Nin
 
 ### Option 1: Download from Releases
 
-1. Go to the [Releases](https://github.com/yourusername/deno-ci/releases) page
+1. Go to the [Releases](https://github.com/denyncrawford/deno-ci/releases) page
 2. Download the appropriate binary for your platform:
    - `deno-ci-darwin` for macOS
    - `deno-ci-linux` for Linux
@@ -32,7 +32,7 @@ A lightweight continuous integration service written in Deno, inspired by CI Nin
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/deno-ci.git
+git clone https://github.com/denyncrawford/deno-ci.git
 cd deno-ci
 ```
 
